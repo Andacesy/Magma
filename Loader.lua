@@ -1,5 +1,7 @@
 repeat wait() until game:IsLoaded()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Alpmon/Taiden/Loader/"..({
-  [994732206] = "BloxFruit",  
-  [978370137 or 1730877806] = "Grand Piece Online",
-})[game.GameId]))()
+local PlaceId = game.PlaceId
+if PlaceId == 994732206 then
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/Alpmon/Taiden/Loader/BloxFruit")()
+elseif PlaceId == 978370137 or 1730877806 then
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/Alpmon/Taiden/Loader/Grand%20Piece%20Online")()
+end
